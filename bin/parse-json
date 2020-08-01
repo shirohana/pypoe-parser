@@ -1,0 +1,73 @@
+#!/usr/bin/env node
+const USAGE = '' +
+`Usage:
+   parse-json [-m | --minimize] [-o <dir> | --output-dir=<dir>]
+              <target.json>
+`
+
+const { join, resolve } = require('path')
+const parseJson = require('../index.js')
+
+const {
+  target,
+  opts
+} = parseArgs(process.argv.slice(2))
+
+parseJson(resolve(target), {
+  ...opts,
+  output: resolve(opts.output)
+})
+
+function parseArgs (args) {
+  let target = null
+  let minimize = false
+  let output = join(__dirname, '../dist')
+
+  for (let i = 0, len = args.length; i < len; ++i) {
+    const arg = args[i]
+
+    if (arg.startsWith('-')) {
+      let [key, value] = arg.split('=', 2)
+      switch (key) {
+      case '-m':
+      case '--minimize':
+        minimize = true
+        continue
+
+      case '-o':
+      case '--output-dir':
+        if (!value) {
+          value = args[i + 1]
+          i += 1
+        }
+        output = value
+        continue
+
+      default:
+        die(`Unknown option: '${arg}'.`)
+      }
+    } else {
+      target = arg
+    }
+  }
+
+  if (!target) {
+    die('Missing target.')
+  }
+
+  return {
+    target,
+    opts: {
+      minimize,
+      output
+    }
+  }
+}
+
+function die (...args) {
+  if (args.length > 0) {
+    console.error(...args)
+  }
+  console.error(USAGE)
+  process.exit(1)
+}

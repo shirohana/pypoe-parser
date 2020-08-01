@@ -1,0 +1,15 @@
+{
+  "name": "pypoe-parser",
+  "version": "0.0.1",
+  "author": "Hana Shiro <shirohana0608@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "main": "index.js",
+  "bin": {
+    "parse-json": "./bin/parse-json"
+  },
+  "dependencies": {
+    "json-stringify-pretty-compact": "^2.0.0",
+    "stream-json": "^1.7.0"
+  }
+}
