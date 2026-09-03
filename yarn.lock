@@ -7,14 +7,14 @@ json-stringify-pretty-compact@^2.0.0:
   resolved "https://registry.yarnpkg.com/json-stringify-pretty-compact/-/json-stringify-pretty-compact-2.0.0.tgz#e77c419f52ff00c45a31f07f4c820c2433143885"
   integrity sha512-WRitRfs6BGq4q8gTgOy4ek7iPFXjbra0H3PmDLKm2xnZ+Gh1HUhiKGgCZkSPNULlP7mvfu6FV/mOLhCarspADQ==
 
-stream-chain@^2.2.3:
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/stream-chain/-/stream-chain-2.2.3.tgz#44cfa21ab673e53a3f1691b3d1665c3aceb1983b"
-  integrity sha512-w+WgmCZ6BItPAD3/4HD1eDiDHRLhjSSyIV+F0kcmmRyz8Uv9hvQF22KyaiAUmOlmX3pJ6F95h+C191UbS8Oe/g==
+stream-chain@^4.2.5:
+  version "4.2.5"
+  resolved "https://registry.yarnpkg.com/stream-chain/-/stream-chain-4.2.5.tgz#9061d29573ab79c49258b2cbe2f72bed7629c79f"
+  integrity sha512-Wtyq3bNE3ggLR0v2vftqvuhltym3WbZAkZpfIrkr5F/6vpeUmWmwTgXa16zD87gpahwJ/Qulq3zVfUlgIc0J2A==
 
-stream-json@^1.7.0:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/stream-json/-/stream-json-1.7.0.tgz#11b3b29ad4bebf12431aae6774ed7bedef159807"
-  integrity sha512-87hBUbTmlcxHWqDbG3WEBBzHJnIvGg7NXmTzyIH9PrXLFVxX6CukZvclG1XckeGUWQrtSALNEQYVt+UXSEVJBg==
+stream-json@^3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/stream-json/-/stream-json-3.5.0.tgz#5cedd64fca7e8dcd226a5e22e5f11722a5376e91"
+  integrity sha512-dobB7zipGW8o11PvdRljQSWuyMxifADLvoHeA4elwNWOTbZo6+BlNa+P6aCq7Y9jRiWTy2Ucu2xSv0Y2/T+/kQ==
   dependencies:
-    stream-chain "^2.2.3"
+    stream-chain "^4.2.5"
