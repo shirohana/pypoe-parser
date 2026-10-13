@@ -10,6 +10,6 @@
   },
   "dependencies": {
     "json-stringify-pretty-compact": "^2.0.0",
-    "stream-json": "^1.7.0"
+    "stream-json": "^3.6.0"
   }
 }
